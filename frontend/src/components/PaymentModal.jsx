@@ -100,7 +100,7 @@ export default function PaymentModal({ booking, station, slot, onProceed, onClos
           <Info size={13} className="text-amber-400 mt-0.5 flex-shrink-0" />
           <div className="flex-1">
             <p className="text-[11px] text-amber-300 font-mono font-semibold">
-              RAZORPAY SANDBOX — No real money charged
+              RAZORPAY SANDBOX â€” No real money charged
             </p>
             {showTestInfo && (
               <p className="text-[11px] text-amber-200/70 mt-1 leading-relaxed">{selectedMeta?.testHint}</p>
