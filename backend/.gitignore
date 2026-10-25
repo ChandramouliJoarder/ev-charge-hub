@@ -1,0 +1,59 @@
+# ============================================================
+#  EV Charge Hub — Backend .gitignore
+# ============================================================
+
+# -- Dependencies --------------------------------------------
+node_modules/
+package-lock.json
+
+# -- Environment & Secrets (NEVER commit these) ---------------
+.env
+.env.local
+.env.production
+.env.staging
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# -- Logs ----------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -- Runtime / Temp files ------------------------------------
+tmp/
+temp/
+uploads/
+.tmp/
+
+# -- Build Outputs -------------------------------------------
+dist/
+build/
+
+# -- Database & Seeds -----------------------------------------
+# Uncomment if you want to exclude seed data from version control
+# src/utils/seedData.js
+# src/utils/seedIndianCities.js
+
+# -- OS / Editor ---------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.suo
+*.swp
+*.swo
+
+# -- Testing -------------------------------------------------
+coverage/
+.nyc_output/
+
+# -- Misc ----------------------------------------------------
+.cache/
+.eslintcache
+*.tsbuildinfo

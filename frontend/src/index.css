@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-charcoal-deep: #14161A;
+    --color-charcoal: #1B1D22;
+    --color-charcoal-light: #242830;
+    --color-charcoal-border: #2E333D;
+    
+    --color-steel: #8C96A2;
+    --color-steel-light: #C6CBD1;
+    --color-steel-border: #404754;
+    
+    --color-offwhite: #F2F3F5;
+    --color-offwhite-dim: #D1D5DB;
+
+    --color-charge-green: #3FA66A;
+    --color-charge-green-light: #4ECB82;
+    --color-charge-green-dark: #2A7347;
+
+    --color-electric-amber: #E8A33D;
+    --color-electric-amber-dark: #B57920;
+
+    --color-blue-grey: #5B6B7A;
+
+    --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #14161A;
+    color: #F2F3F5;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Industrial metallic subtle borders and hardware panel styling */
+.hardware-panel {
+  background-color: #1B1D22;
+  border: 1px solid #404754;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
+}
+
+.hardware-panel-bordered {
+  background: linear-gradient(180deg, rgba(36, 40, 48, 0.8) 0%, rgba(20, 22, 26, 0.95) 100%);
+  border: 1px solid rgba(198, 203, 209, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.metallic-badge {
+  background: linear-gradient(135deg, #2E333D 0%, #1B1D22 100%);
+  border: 1px solid #404754;
+  color: #C6CBD1;
+}
+
+/* Custom pulsing animation for active charging slot */
+@keyframes chargingGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(63, 166, 106, 0.5);
+    border-color: #3FA66A;
+  }
+  50% {
+    box-shadow: 0 0 16px 2px rgba(63, 166, 106, 0.85);
+    border-color: #4ECB82;
+  }
+}
+
+.animate-charging-pulse {
+  animation: chargingGlow 2.2s infinite ease-in-out;
+}
+
+/* Leaflet dark/industrial map tile filter */
+.custom-ev-map .leaflet-tile {
+  filter: brightness(0.78) invert(1) contrast(3.2) hue-rotate(200deg) saturate(0.3) !important;
+}
+
+.leaflet-container {
+  font-family: var(--font-body) !important;
+  background-color: #14161A !important;
+  border-radius: 4px;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #14161A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2E333D;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404754;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
